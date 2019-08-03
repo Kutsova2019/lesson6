@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>hw6</title>
+</head>
+<body>
+	<script>
+		function padString(string, resultLength, symbol, flag) {
+			if (string.length >= resultLength) {
+				return string;
+			} else {
+				return flag ? padString (string, resultLength - 1, symbol, flag) + symbol : symbol + padString (string, resultLength - 1, symbol);
+			}
+		}
+
+		var flag = confirm ('What is your name?');
+		console.log(padString('Mary', 5, '*', flag));
+
+	</script> 
+
+</body>
+</html>
